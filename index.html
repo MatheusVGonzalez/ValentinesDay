@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Livro de Memórias</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      color: #333;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #c71585;
+    }
+
+    .memory-card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .memory-card:hover {
+      transform: scale(1.02);
+    }
+
+    .memory-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .memory-content {
+      padding: 1rem;
+    }
+
+    .memory-content h2 {
+      font-size: 1.5rem;
+      color: #d63384;
+      margin-bottom: 0.5rem;
+    }
+
+    .memory-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .memory-content h2 {
+        font-size: 1.2rem;
+      }
+
+      .memory-content p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nosso Livro de Memórias 💖</h1>
+  </header>
+
+  <section class="memory-card">
+    <img src="images/viagem-paraty.jpg" alt="Viagem para Paraty">
+    <div class="memory-content">
+      <h2>🌅 Viagem para Paraty</h2>
+      <p>Aquela viagem inesquecível, só nós dois, vendo o pôr do sol na praia. Foi mágico.</p>
+    </div>
+  </section>
+
+  <section class="memory-card">
+    <img src="images/aniversario.jpg" alt="Aniversário surpresa">
+    <div class="memory-content">
+      <h2>🎉 Seu Aniversário</h2>
+      <p>A surpresa, os balões, o bolo — tudo foi preparado com amor. Te ver sorrindo foi tudo pra mim.</p>
+    </div>
+  </section>
+
+  <section class="memory-card">
+    <img src="images/no-cinema.jpg" alt="Nosso primeiro cinema">
+    <div class="memory-content">
+      <h2>🎬 Nosso Primeiro Cinema</h2>
+      <p>Não lembro qual filme era, só lembro de estar de mãos dadas com você, nervoso e feliz ao mesmo tempo.</p>
+    </div>
+  </section>
+
+
+  <footer>
+    Feito com 💘 por alguém que te ama muito
+  </footer>
+</body>
+</html>
