@@ -38,6 +38,10 @@
       overflow: hidden;
       margin-bottom: 2rem;
       transition: transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: 0.3s;
     }
 
     .memory-card:hover {
@@ -72,6 +76,82 @@
       color: #888;
     }
 
+    #lock-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ffe4e1, #ffc0cb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lock-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.lock-box input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  width: 100px;
+  text-align: center;
+  margin-top: 1rem;
+  border: 2px solid #d63384;
+  border-radius: 10px;
+}
+
+.lock-box button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.lock-box button:hover {
+  background-color: #c71585;
+}
+
+#error-msg {
+  color: red;
+  margin-top: 1rem;
+}
+
+.dedicatoria {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #a0527d;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
@@ -90,49 +170,335 @@
 <body>
   <header>
     <h1>Nosso Livro de Memórias 💖</h1>
+    <p class="dedicatoria">
+    Feliz Dia dos Namorados minha vidaaa! <br>
+    Tô fazendo esse site pra podermos juntar todaaas as nossas lembranças e momentos que tivemos e vamos ter juntos. Vamos ter um álbum nosso de fotos online <br>
+    Temos tanta foto que se eu colocasse todas, ia passar um mês aqui... Então eu peguei só as principais de alguns momentos importantes! <br>
+    Espero que goste meu amooor! <br>
+    PS: EU TE AMOOOOOOOO ❤️
+</p>
+
   </header>
 
   <section class="memory-card">
-    <img src="images/viagem-paraty.jpg" alt="Instagram">
+    <img src="images/conversa.jpeg" alt="Instagram">
     <div class="memory-content">
-      <h2> Nossa Primeira conversa</h2>
+      <h2> Nossa Primeira conversa - 22/08/2023</h2>
       <p> Você tinha me colocado no CF, e foi ali que tudo começou, uma simples conversa de manequim de Artes... </p>
     </div>
   </section>
   <section class="memory-card">
-    <img src="images/viagem-paraty.jpg" alt="Foto pegando Amora">
+    <img src="images/amora.jpeg" alt="Foto pegando Amora">
     <div class="memory-content">
-      <h2> Nosso Primeiro almoço juntos</h2>
-      <p>Primeiro dia que almoçamos juntos depois da escola... Famoso strogonoff de frango. e foi ali que o principe se apaixonou pela princesa  </p>
+      <h2> Nosso Primeiro almoço juntos - 29/08/2023</h2>
+      <p>Primeiro dia que almoçamos juntos depois da escola... Strogonoff de frango dos bão e você toda timida pra comer kkkkkkkk </p>
+    </div>
+  </section>
+    <section class="memory-card">
+    <img src="images/hopihari23.jpeg" alt="Foto pegando Amora">
+    <div class="memory-content">
+      <h2> Hopi Hari - 14/09/2023</h2>
+      <p>Primeiro Hopi Hari Juntoooss </p>
     </div>
   </section>
 
   <section class="memory-card">
-    <img src="images/aniversario.jpg" alt="Aniversário surpresa">
+    <img src="images/aniversario.jpeg" alt="Aniversário surpresa">
     <div class="memory-content">
-      <h2> Meu aniversário</h2>
+      <h2> Minha festa de 17 - 03/02/2024</h2>
       <p>Foi ali que voltamos, tudo começou de fato, com o livro que tinha feito pra você</p>
     </div>
   </section>
 
   <section class="memory-card">
-    <img src="images/no-cinema.jpg" alt="Santa Rita">
+    <img src="images/santarita.jpeg" alt="Santa Rita">
     <div class="memory-content">
-      <h2> Fomos no Carnaval no Santa Rita</h2>
-      <p>Nesse dia aqui você tava linda, incrivelmente linda...</p>
+      <h2>Carnaval no Santa Rita - 11/02/2024 </h2>
+      <p>O tempo foi passando, e eu lembro que nesse dia aqui você tava linda, incrivelmente linda...</p>
     </div>
   </section>
 
   <section class="memory-card">
-    <img src="images/no-cinema.jpg" alt="Santa Rita">
+    <img src="images/paraibuna2.jpeg" alt="Paraibuna">
     <div class="memory-content">
-      <h2> Fomos no Carnaval no Santa Rita</h2>
-      <p>Nesse dia aqui você tava linda, incrivelmente linda...</p>
+      <h2>Paraibuna Chuva - 13/02/2024</h2>
+      <p>Primeira vez "Ilegal" em Paraibuna KKKKKKK, e corremos na chuva</p>
+    </div>
+  </section>
+
+
+  <section class="memory-card">
+    <img src="images/paraibuna.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Casa Flavia - 01/06/2024 </h2>
+      <p>Segunda vez "Ilegal" em Paraibuna KKKKKKK, dia de skin care hehe, e aqui eu conheci sua avó</p>
+    </div>
+  </section>
+
+    <section class="memory-card">
+    <img src="images/festaJunina24.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Festa Junina 2024 - 08/06/2024</h2>
+      <p>Festa Junina na UNIVAP, primeira vez que eu conversei conversei com seus pais, conheci suas irmãs, sua avó de novoo</p>
+    </div>
+  </section>
+
+    <section class="memory-card">
+    <img src="images/Encontro.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Primeiro Encontro - 12/06/2024</h2>
+      <p>Nosso primeiro encontro, fomos no outback. Estavamos tao felizes por sair juntos</p>
+    </div>
+  </section>
+    
+  <section class="memory-card">
+    <img src="images/niverFe.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Aniversário do Fe - 24/06/2024</h2>
+      <p>Primeira vez que você veio e conversou com meus pais e conheceu eles... Lembro que nesse dia o Beni tava todo feliz de ter te conhecido. E eu lá surtando de felicidade por estar com você</p>
+    </div>
+  </section>
+
+  <section class="memory-card">
+    <img src="images/Fantasia.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Festa Fantasia da Formatura - 27/06/2024</h2>
+      <p>Festa Fantasia que tivemos da formatura, você tinha ido combinando com a Vargas e eu de Harry Potter</p>
+    </div>
+  </section>
+
+<section class="memory-card">
+    <img src="images/2Encontro.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Primeiro cinema juntos - 12/07/2024</h2>
+      <p>Lembro que tinhamos ido assistir Divertidamente 2 e fomos na doceria do Vale Sul pra comer um docito</p>
+    </div>
+  </section>
+  
+  <section class="memory-card">
+    <img src="images/alianca.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Pedido de Namoro - 20/07/2024</h2>
+      <p>Dia histórico, primeiro e unico role de moto eletrica que ja gerou no pedido hehe</p>
+    </div>
+  </section>
+
+
+<section class="memory-card">
+    <img src="images/momoravers.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Aniversário da Momora - 24/07/2024</h2>
+      <p>Aniversário da momora no rodizio de pizza, ti levei floress hihi</p>
+    </div>
+  </section>
+  
+  
+<section class="memory-card">
+    <img src="images/festa.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Festa da formatura - 04/08/2024</h2>
+      <p>Festa da Formatura com piscina e comida, as coisa tudo</p>
+    </div>
+  </section>
+  <section class="memory-card">
+    <img src="images/hopihari.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Hopi Hari - 06/09/2024</h2>
+      <p>Hopi Hari juntossss</p>
+    </div>
+  </section>
+  <section class="memory-card">
+    <img src="images/viagem.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Primeira Viagem Juntos - 07/09/2024</h2>
+      <p>Aniversário do Beniii e fomos pra um DayUsee hehe, piscinaaaaa e comidaaaa</p>
+    </div>
+  </section>
+  
+  <section class="memory-card">
+    <img src="images/terceirao.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Esquenta do Terceirão - 01/11/2024</h2>
+      <p>terceirao estavámos tudoooo sujoo KKKKKKKK</p>
+    </div>
+  </section>
+
+   <section class="memory-card">
+    <img src="images/camisa.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Camisa Momor - 12/11/2024</h2>
+      <p>Tem nem o que falar... Eu te amoooooooo meu amor </p>
+    </div>
+  </section>
+     <section class="memory-card">
+    <img src="images/campos.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Segunda Viagem Juntooos - 23/11/2024</h2>
+      <p>Fomos para Camposs, iluminação de Nataaall, comemos chocolate quente e uma pizza das boa hi hi</p>
+    </div>
+  </section>
+
+       <section class="memory-card">
+    <img src="images/chique.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Rodizio de Massa - 06/12/2024</h2>
+      <p>Não sei porque, mas lembro muito desse restaurante, era dos bão, o atendente era muito gente boa também</p>
+    </div>
+  </section>
+
+         <section class="memory-card">
+    <img src="images/circo.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Circo - 06/12/2024</h2>
+      <p>Sem palavras né, eu também too kkkkkkkkkkkkk</p>
+    </div>
+  </section>
+
+           <section class="memory-card">
+    <img src="images/formandos.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Formandos - 18/12/2024</h2>
+      <p>Finalmente formandos! (Jesus, você é tão linda 😍) </p>
+    </div>
+  </section>
+
+             <section class="memory-card">
+    <img src="images/formaturaminha.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Formatura Momor - 21/12/2024</h2>
+      <p>Minha festa de formatura, e de novo você é incrivelmente linda 😍 </p>
+    </div>
+  </section>
+
+  
+             <section class="memory-card">
+    <img src="images/formaturadela.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Formatura Momora - 22/12/2024</h2>
+      <p>Sua festa de formatura, preciso dizer de novo? Você é um espetaculo de mulher ❤️</p>
+    </div>
+  </section>
+             <section class="memory-card">
+    <img src="images/anonovo.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Ano novo - 01/01/2025</h2>
+      <p>Ano novo, e meu amor por você só aumenta ❤️</p>
+    </div>
+  </section>
+
+             <section class="memory-card">
+    <img src="images/aniversario2.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>aniversario do Momor - 02/02/2025</h2>
+      <p>Olha que mulher perfeita ❤️</p>
+    </div>
+  </section>
+             <section class="memory-card">
+    <img src="images/coelhinha.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Carnaval Paraibuna - 01/03/2025</h2>
+      <p>Fomos para paraibuna por causa do Carnaval, e oia só Minha coelhinha tão linda</p>
+    </div>
+  </section>
+            <section class="memory-card">
+    <img src="images/rodizio.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Rodizio comida Japonesa - 13/03/2025</h2>
+      <p> Dia de levar a momora pra comer comida japonesa </p>
+    </div>
+  </section>
+              <section class="memory-card">
+    <img src="images/rodizio2.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Rodizio Hamburguer - 18/03/2025</h2>
+      <p> Dia de levar a momora pra comer borelli e Hamburguer </p>
+    </div>
+  </section>
+              <section class="memory-card">
+    <img src="images/sp.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>São Paulo - 22/03/2025</h2>
+      <p>Fomos no restaurante do Casamento da Dani e conhecer um pouco de SP hehe</p>
+    </div>
+  </section>
+              <section class="memory-card">
+    <img src="images/missyou.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Aeroporto - 02/04/2025</h2>
+      <p>Despedida no Aeroporto... Miss momora</p>
+    </div>
+  </section>
+
+              <section class="memory-card">
+    <img src="images/cartas.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Cartas - 02/04/2025</h2>
+      <p>E eu me derretendo por você lendo minhas cartas</p>
+    </div>
+  </section>
+
+                <section class="memory-card">
+    <img src="images/momoraebaiel.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Momora e Baiel - 10/04/2025</h2>
+      <p>Momora conheceu o Baiel e eu todo feliz</p>
+    </div>
+  </section>
+
+                  <section class="memory-card">
+    <img src="images/meat.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Mesversário Abril - 20/04/2025</h2>
+      <p>E mesmo distante, comemoramos nosso mesversario juntinhos</p>
+    </div>
+  </section>
+
+                    <section class="memory-card">
+    <img src="images/bobo.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>A mimir - 26/04/2025</h2>
+      <p>E eu aqui todo bobo por ter uma princesa tão perfeita ❤️</p>
+    </div>
+  </section>
+
+                    <section class="memory-card">
+    <img src="images/loading.jpeg" alt="Santa Rita">
+    <div class="memory-content">
+      <h2>Loading- 14/06/2025</h2>
+      <p>A caminho da momora</p>
     </div>
   </section>
   
   <footer>
-    Feito com 💘 por alguém que te ama muito
+    Feito pelo Momor ❤️
   </footer>
+
+
+
+  <script>
+  const correctPIN = "2007"; // Defina seu PIN aqui
+
+  function checkPIN() {
+    const enteredPIN = document.getElementById('pin-input').value;
+    const errorMsg = document.getElementById('error-msg');
+    
+    if (enteredPIN === correctPIN) {
+      document.getElementById('lock-screen').style.display = 'none';
+    } else {
+      errorMsg.textContent = "PIN incorreto! Tente novamente.";
+    }
+  }
+</script>
+
 </body>
+<div id="lock-screen">
+  <div class="lock-box">
+    <h2>Digite o PIN 💖</h2>
+    <p>Dica: Nossa data (4 digitos)</p>
+    <input type="password" id="pin-input" maxlength="4" />
+    <button onclick="checkPIN()">Entrar</button>
+    <p id="error-msg"></p>
+  </div>
+</div>
+
 </html>
